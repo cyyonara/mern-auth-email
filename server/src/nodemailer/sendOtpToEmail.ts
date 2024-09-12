@@ -5,7 +5,7 @@ const sendOtpToEmail = async (otp: string, receiver: string) => {
     from: process.env.GMAIL_USER,
     to: receiver,
     subject: 'Verify your account',
-    html: `<h1>Here is your OTP: ${otp}</h1>`,
+    html: `<h1 style="background-color: pink; padding: 10px;">Here is your OTP: ${otp}</h1>`,
   });
 };
 

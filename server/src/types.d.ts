@@ -14,8 +14,3 @@ interface IRequest extends Request {
 interface ITokenPayload extends JwtPayload {
   userId: string;
 }
-
-interface OtpTokenPayload extends JwtPayload {
-  userId: string;
-  otpToken: string;
-}

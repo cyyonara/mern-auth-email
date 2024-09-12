@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 import authRouter from './routes/auth.router';
 import { notFound, errorHandler } from './middlewares/error-handlers';
 import dbConnect from './config/db.connect';
+import { connectToRedis } from './config/redis';
 
 dotenv.config();
 
@@ -33,4 +34,5 @@ app.use(errorHandler);
 app.listen(port, () => {
   console.log(`server is running on port ${port}`);
   dbConnect();
+  connectToRedis();
 });
